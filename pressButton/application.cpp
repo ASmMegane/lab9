@@ -40,6 +40,5 @@ void AppData::runApp() {
 			if (checkBox.OnEvent(event))
 				break;
 		}
-//		sf::sleep(sf::microseconds((sf::Int64)(1000000 / 60.0) - clock.getElapsedTime().asMicroseconds()));
 	}
 }

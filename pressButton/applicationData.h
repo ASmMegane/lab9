@@ -2,7 +2,8 @@
 #include <SFML/Graphics.hpp>
 #include <ctime>
 #include <iostream>
-#include "buttonData.h"
+#include "checkBoxData.h"
+#include "textBoxData.h"
 
 struct AppData {
 	AppData();

@@ -26,19 +26,3 @@ struct CustomButton {
 	bool setColorState(ColorState colorState);
 	std::function<void()> handlerEventPress;
 };
-
-struct CheckBox : CustomButton {
-	CheckBox() : CustomButton() { 
-		isActive = false; 
-	};
-	sf::CircleShape checkMark;
-	bool isActive;
-	void arrangeElements();
-	void draw(sf::RenderWindow & window);
-};
-
-struct TextBox : CustomButton {
-	std::string valueText;
-	void arrangeElements();
-	bool OnEvent(sf::Event & event);
-};

@@ -1,11 +1,12 @@
 #include "stdafx.h"
-#include "buttonData.h"
+#include "customButtonData.h"
 
 CustomButton::CustomButton() {
 	shape.setOutlineThickness(5);
 	setColorState(normal);
 	isVisible = true;
 };
+
 
 bool CustomButton::intersectWithMouse(int posMouseX, int posMouseY) {
 	if (posMouseX > shape.getPosition().x && posMouseX < shape.getPosition().x + shape.getSize().x
@@ -76,45 +77,3 @@ bool CustomButton::OnEvent(sf::Event & event) {
 	return false;
 }
 
-void CheckBox::draw(sf::RenderWindow & window) {
-	if (isVisible) {
-		CustomButton::draw(window);
-		if (isActive)
-			window.draw(checkMark);
-	}
-}
-
-void CheckBox::arrangeElements() {
-	shape.setSize(sf::Vector2f((float)(text.getString().getSize() * text.getCharacterSize() / 2), (float)text.getCharacterSize() * 2));
-	text.setPosition(shape.getPosition());
-	text.setColor(sf::Color::Black);
-	checkMark.setRadius((float)text.getCharacterSize() / 2);
-	checkMark.setFillColor(sf::Color::Green);
-	checkMark.setPosition(shape.getPosition().x + shape.getSize().x / 2 - checkMark.getRadius(), shape.getPosition().y + shape.getSize().y - checkMark.getRadius() * 2);
-}
-
-void TextBox::arrangeElements() {
-	sf::Vector2f size(300, 150);
-	shape.setSize(sf::Vector2f(size));
-	text.setColor(sf::Color::Black);
-	text.setPosition(shape.getPosition());
-}
-
-bool TextBox::OnEvent(sf::Event & event) {
-	if (isVisible) {
-		if (event.type == sf::Event::TextEntered && colorState == hovered) {
-			if (event.text.unicode < 128) {
-				if (event.text.unicode == 8)
-					valueText = valueText.substr(0, valueText.size() - 1);
-				else
-					valueText += static_cast<char>(event.text.unicode);
-				if ((valueText.size() % ((int)(shape.getSize().x / 12))) == 0)
-					valueText += "\n";
-				text.setString(valueText);
-			}
-			return true;
-		}
-		return CustomButton::OnEvent(event);
-	}
-	return false;
-}

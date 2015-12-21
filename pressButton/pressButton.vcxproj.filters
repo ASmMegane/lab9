@@ -24,10 +24,16 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="buttonData.h">
+    <ClInclude Include="applicationData.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="applicationData.h">
+    <ClInclude Include="customButtonData.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="checkBoxData.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="textBoxData.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,10 +44,16 @@
     <ClCompile Include="lab9.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="button.cpp">
+    <ClCompile Include="application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="application.cpp">
+    <ClCompile Include="customButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="checkBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="textBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
