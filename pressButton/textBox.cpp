@@ -22,8 +22,6 @@ bool TextBox::OnEvent(sf::Event & event) {
 			} else if (event.text.unicode < 32) {
 				if (event.text.unicode == backspaceCode)
 					lineInputValue = lineInputValue.substr(0, lineInputValue.size() - 1);
-				else if (event.text.unicode == enterCode)
-					lineInputValue = "";
 				text.setString(lineInputValue);
 				return true;
 			}

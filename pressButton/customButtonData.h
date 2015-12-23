@@ -23,6 +23,7 @@ struct CustomButton {
 	void setPosition(sf::Vector2f const & position);
 	void setSize(sf::Vector2f const & size);
 	void arrangeElements();
+	virtual void eventMouseButtonRelased() {};
 	bool setColorState(ColorState colorState);
 	std::function<void()> handlerEventPress;
 };

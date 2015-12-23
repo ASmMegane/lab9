@@ -9,4 +9,5 @@ struct CheckBox : CustomButton {
 	bool isActive;
 	void arrangeElements();
 	void draw(sf::RenderWindow & window);
+	virtual void eventMouseButtonRelased();
 };

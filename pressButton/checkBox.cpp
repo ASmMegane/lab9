@@ -17,3 +17,7 @@ void CheckBox::arrangeElements() {
 	checkMark.setFillColor(sf::Color::Green);
 	checkMark.setPosition(shape.getPosition().x + shape.getSize().x / 2 - checkMark.getRadius(), shape.getPosition().y + shape.getSize().y - checkMark.getRadius() * 2.5f);
 }
+
+void CheckBox::eventMouseButtonRelased() {
+	isActive = !isActive;
+}

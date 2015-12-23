@@ -13,7 +13,6 @@ AppData::AppData() {
 	checkBox.text.setCharacterSize(15);
 	checkBox.arrangeElements();
 	checkBox.handlerEventPress = [&]() {
-		checkBox.isActive = !checkBox.isActive;
 		textBox.isVisible = checkBox.isActive;
 		};
 

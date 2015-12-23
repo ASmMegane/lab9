@@ -69,6 +69,7 @@ bool CustomButton::OnEvent(sf::Event & event) {
 		}
 		if ((event.type == sf::Event::MouseButtonReleased && event.key.code == sf::Mouse::Left) && intersectWithMouse(event.mouseButton.x, event.mouseButton.y)) {
 			setColorState(hovered);
+			eventMouseButtonRelased();
 			if (handlerEventPress)
 				handlerEventPress();
 			return true;

@@ -2,6 +2,8 @@
 #include <SFML/Graphics.hpp>
 #include <ctime>
 #include <iostream>
+#include <algorithm>
+#include <cstdlib>
 #include "checkBoxData.h"
 #include "textBoxData.h"
 
